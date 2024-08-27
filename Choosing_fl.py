@@ -44,9 +44,7 @@ def repeat_chasing(interesting_point, data):
 score_point = {}
 
 # Función principal de elección y procesamiento de puntos adaptada
-def choosin(choosen_type):
-    # Cargar los datos desde el archivo JSON
-    data = cargar_datos()
+def choosin(choosen_type, data):
     if data:
         chosen_type = choose(choosen_type)
         if chosen_type:
