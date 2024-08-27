@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - FindPoint{% endblock %}
+
+{% block header %}
+<div class="d-flex justify-content-center align-items-center">
+    <a href="{{ url_for('index_b') }}" class="nav-link" style="text-decoration: none; color: #ffffff">Change City</a>
+    <h1 class="text-center w-100">Welcome to {{ city.title() }} {{ current_user.username }}</h1>
+    <a href="{{ url_for('logout') }}" class="nav-link" style="text-decoration: none; color: #ffffff">Logout</a>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row custom-spacing g-2 justify-content-center">
+        <!-- Primera fila -->
+        <div class="col-md-6">
+            <div class="card small-card shadow-sm mx-auto animated-border-1" style="background-image: url('{{ image_url }}');">
+                <div class="card-body d-flex align-items-center justify-content-center">
+                    <a href="{{ url_for('visit_b') }}" class="btn btn-custom btn-lg">Find a Point</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card small-card shadow-sm mx-auto animated-border-2" style="background-image: url('{{ image_url }}');">
+                <div class="card-body d-flex align-items-center justify-content-center">
+                    <a href="{{ url_for('rate') }}" class="btn btn-custom btn-lg">Rate a Point</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Segunda fila -->
+        <div class="col-md-6">
+            <div class="card small-card shadow-sm mx-auto animated-border-3" style="background-image: url('{{ image_url }}');">
+                <div class="card-body d-flex align-items-center justify-content-center">
+                    <a href="{{ url_for('add') }}" class="btn btn-custom btn-lg">Add a Point</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card small-card shadow-sm mx-auto animated-border-4" style="background-image: url('{{ image_url }}');">
+                <div class="card-body d-flex align-items-center justify-content-center">
+                    <a href="{{ url_for('delete') }}" class="btn btn-custom btn-lg">Delete a Point</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

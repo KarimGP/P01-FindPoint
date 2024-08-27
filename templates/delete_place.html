@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Delete a Point{% endblock %}
+
+{% block header %}
+Delete a Point
+{% endblock %}
+
+{% block content %}
+<div style="margin-top: 20px; max-width: 600px; margin-left: auto; margin-right: auto;">
+    <div style="padding: 20px; border: 1px solid #ddd; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);">
+        <form method="post">
+            <label for="delete_point">Point to Delete:</label>
+            <input type="text" id="delete_point" name="delete_point" style="width: 100%; padding: 10px; margin-bottom: 10px;" required>
+            <label for="category">Category (arc, art, us):</label>
+            <input type="text" id="category" name="category" style="width: 100%; padding: 10px; margin-bottom: 10px;" required>
+            <button type="submit" style="width: 100%; padding: 10px; background-color: #00a8ad; color: white;">
+                Delete Point
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}
+

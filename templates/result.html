@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Result{% endblock %}
+
+{% block header %}
+Result
+{% endblock %}
+
+{% block content %}
+<div style="margin-top: 20px; max-width: 600px; margin-left: auto; margin-right: auto;">
+    <div style="padding: 20px; border: 1px solid #ddd; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); text-align: center;">
+        <p style="margin-bottom: 20px;">{{ result }}</p>
+        <a href="{{ url_for('dashboard') }}" style="display: inline-block; padding: 10px 20px; background-color: #00a8ad; color: white; text-decoration: none;">
+            Go back to your user page
+        </a>
+    </div>
+</div>
+{% endblock %}

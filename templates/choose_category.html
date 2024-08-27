@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Choose a Category{% endblock %}
+
+{% block header %}
+Choose a Category
+{% endblock %}
+
+{% block content %}
+<div style="margin-top: 20px; max-width: 600px; margin-left: auto; margin-right: auto;">
+    <div style="padding: 20px; border: 1px solid #ddd; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);">
+        <form method="POST" action="{{ url_for('visit') }}">
+            <label for="category">Please, choose between Architecture (arc), Art (art) or Urban spaces (us):</label>
+            <input type="text" id="category" name="category" style="width: 100%; padding: 10px; margin-bottom: 10px;" required>
+            <button type="submit" style="width: 100%; padding: 10px; background-color: #00a8ad; color: white;">
+                Submit
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}

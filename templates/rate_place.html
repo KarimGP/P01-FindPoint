@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Rate a Point{% endblock %}
+
+{% block header %}
+Rate a Point
+{% endblock %}
+
+{% block content %}
+<div style="margin-top: 20px; max-width: 600px; margin-left: auto; margin-right: auto;">
+    <div style="padding: 20px; border: 1px solid #ddd; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);">
+        <form method="post">
+            <label for="category">Category (arc, art, us):</label>
+            <input type="text" id="category" name="category" style="width: 100%; padding: 10px; margin-bottom: 10px;" required>
+            <label for="place">Place Name:</label>
+            <input type="text" id="place" name="place" style="width: 100%; padding: 10px; margin-bottom: 10px;" required>
+            <label for="rating">Rating (1-5):</label>
+            <input type="number" id="rating" name="rating" style="width: 100%; padding: 10px; margin-bottom: 10px;" min="1" max="5" required>
+            <button type="submit" style="width: 100%; padding: 10px; background-color: #00a8ad; color: white;">
+                Submit Rating
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}
+

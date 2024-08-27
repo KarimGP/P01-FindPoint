@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}Edit Profile - FindPoint{% endblock %}
+
+{% block header %}
+    Edit Your Profile
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form method="POST" action="{{ url_for('edit_profile') }}">
+                <!-- Campo de Username -->
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="username" name="username" value="{{ current_user.username }}" required>
+                </div>
+                <!-- Campo de Año de Nacimiento -->
+                <div class="mb-3">
+                    <label for="birth_year" class="form-label">Birth year</label>
+                    <input type="number" class="form-control" id="birth_year" name="birth_year" placeholder="YYYY" min="1900" max="{{ current_year }}" value="{{ current_user.birth_year }}">
+                </div>
+
+                <!-- Campo de País -->
+                <div class="mb-3">
+                    <label for="country" class="form-label">Country</label>
+                    <select class="form-control" id="country" name="country" required>
+                        <option value="" disabled>Select your country</option>
+                        {% for country in countries %}
+                            <option value="{{ country }}" {% if country == current_user.country %}selected{% endif %}>{{ country }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <!-- Campo de Email -->
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="email" name="email" value="{{ current_user.email }}" required>
+                </div>
+                <!-- Campo de Password -->
+                <div class="mb-3">
+                    <label for="password" class="form-label">New Password</label>
+                    <input type="password" class="form-control" id="password" name="password">
+                    <small class="form-text text-muted">Leave blank to keep your current password.</small>
+                </div>
+                <!-- Botón de Guardar -->
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-custom-color">Save Changes</button>
+                </div>
+                <div class="d-grid" style="margin-top: 1rem;">
+                    <a href="{{ url_for('delete_account') }}" class="btn btn-danger">Delete My Account</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

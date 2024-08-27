@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}Login - FindPoint{% endblock %}
+
+{% set page_title = "Let's log in" %}
+
+{% block header %}
+    {{ page_title }}
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form method="POST" action="{{ url_for('login') }}">
+                <!-- Campo de Email -->
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <!-- Campo de Password -->
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" required>
+                </div>
+                <!-- Botón de Login -->
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-custom-color">Log in</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

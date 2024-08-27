@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Add or Delete a Point{% endblock %}
+
+{% block header %}
+Add or Delete a Point
+{% endblock %}
+
+{% block content %}
+<div style="margin-top: 20px; max-width: 600px; margin-left: auto; margin-right: auto;">
+    <div style="padding: 20px; border: 1px solid #ddd; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);">
+        <form method="post">
+            <button type="submit" formaction="{{ url_for('add_or_delete', _method='POST', action='add') }}" 
+                    style="width: 100%; padding: 10px; background-color: #00a8ad; color: white; margin-bottom: 10px;">
+                Add Point
+            </button>
+            <button type="submit" formaction="{{ url_for('add_or_delete', _method='POST', action='delete') }}" 
+                    style="width: 100%; padding: 10px; background-color: #00a8ad; color: white;">
+                Delete Point
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}

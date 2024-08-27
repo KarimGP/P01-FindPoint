@@ -1,0 +1,135 @@
+{
+    "arc": {
+        "Casa Batll\u00c3\u00b3": {
+            "rating": [
+                5,
+                5,
+                5
+            ],
+            "media": 5.0,
+            "coordinates": {
+                "lat": 41.3917,
+                "lng": 2.1649
+            }
+        },
+        "Sagrada Familia": {
+            "rating": [],
+            "coordinates": {
+                "lat": 41.4036,
+                "lng": 2.1744
+            }
+        },
+        "Catedral": {
+            "rating": [],
+            "coordinates": {
+                "lat": 41.384,
+                "lng": 2.1761
+            }
+        },
+        "Pop": {
+            "rating": [],
+            "coordinates": {
+                "lat": 41.40568392560884,
+                "lng": 2.190781226809329
+            }
+        }
+    },
+    "art": {
+        "Museu Picasso": {
+            "rating": [
+                4,
+                3
+            ],
+            "media": 3.5,
+            "coordinates": {
+                "lat": 41.3851,
+                "lng": 2.1805
+            }
+        },
+        "Macba": {
+            "rating": [
+                4,
+                5,
+                4,
+                5,
+                5,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                5,
+                4
+            ],
+            "media": 4.31,
+            "coordinates": {
+                "lat": 41.3837,
+                "lng": 2.1661
+            }
+        },
+        "Ideal Barcelona": {
+            "rating": [
+                4,
+                3
+            ],
+            "media": 3.5,
+            "coordinates": {
+                "lat": 41.3837,
+                "lng": 2.1661
+            }
+        },
+        "Kok": {
+            "rating": [],
+            "coordinates": {
+                "lat": 41.40568392560884,
+                "lng": -3.6831157774983083
+            },
+            "user_id": 2
+        }
+    },
+    "us": {
+        "Parc G\u00fcell": {
+            "rating": [
+                4,
+                3
+            ],
+            "media": 3.5,
+            "coordinates": {
+                "lat": 41.3837,
+                "lng": 2.1661
+            }
+        },
+        "Montju\u00efc": {
+            "rating": [
+                4,
+                3,
+                5,
+                5
+            ],
+            "media": 4.25,
+            "coordinates": {
+                "lat": 41.3837,
+                "lng": 2.1661
+            }
+        },
+        "Platja Barceloneta": {
+            "rating": [
+                4,
+                3
+            ],
+            "media": 3.5,
+            "coordinates": {
+                "lat": 41.3837,
+                "lng": 2.1661
+            }
+        },
+        "Aa": {
+            "rating": [],
+            "coordinates": {
+                "lat": 41.40568392560884,
+                "lng": 2.190781226809329
+            }
+        }
+    }
+}

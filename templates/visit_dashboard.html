@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}Interesting Point{% endblock %}
+
+{% block header %}
+Interesting Point
+{% endblock %}
+
+{% block content %}
+<div style="margin-top: 20px; max-width: 600px; margin-left: auto; margin-right: auto;">
+    <div style="padding: 20px; border: 1px solid #ddd; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); text-align: center;">
+        <p style="margin-bottom: 10px;"><strong>{{ point_1}}</strong></p>
+        <p style="margin-bottom: 20px;">{{ rating_text }}</p>
+
+        <!-- Contenedor para el mapa -->
+        <div id="map" style="width: 100%; height: 400px; margin-bottom: 20px;"></div>
+        <a href="{{ url_for('dashboard') }}" style="display: inline-block; padding: 10px 20px; background-color: #00a8ad; color: white; text-decoration: none;">
+            Go back to your user page
+        </a>
+    </div>
+</div>
+
+<!-- Cargar la API de Google Maps -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA11RN-V7V9lPQZH0kglJHDm-CW6WRBBis&callback=initMap" async defer></script>
+<script type="text/javascript">
+    function initMap() {
+        // Coordenadas del lugar (debes pasar latitud y longitud desde el backend)
+        var location = {lat: {{ latitude }}, lng: {{ longitude }}};
+
+        // Crear el mapa centrado en las coordenadas
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 15,
+            center: location
+        });
+
+        // Marcar el lugar en el mapa
+        var marker = new google.maps.Marker({
+            position: location,
+            map: map
+        });
+    }
+</script>
+{% endblock %}
