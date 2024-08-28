@@ -33,7 +33,6 @@
             display: flex;
             flex-direction: column;
             padding-top: 50px; /* Deja espacio para la navbar fija */
-
         }
 
         h1, h2, h3, h4, h5, h6 {
@@ -52,6 +51,8 @@
             left: 50%;
             transform: translate(-50%, -50%);
             z-index: 2;
+            font-size: 1rem; /* Tamaño del texto del botón */
+            padding: 0.2rem 1rem; /* Padding del botón */
         }
 
         .btn-custom:hover {
@@ -61,13 +62,13 @@
         .btn-custom-color {
             background-color: #00a8ad; /* Cambia a tu color preferido */
             color: white;
-            border: none        
+            border: none;
         }
 
         .btn-custom-color:hover {
             background-color: #ffffff; /* Color al hacer hover */
             color: black;
-            border: none
+            border: none;
         }
 
         .form-control, .list-group-item {
@@ -81,30 +82,35 @@
         }
 
         .navbar-custom {
-            background-color: rgba(0, 0, 0, 0.65); /* Fondo blanco para la barra */
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera para la barra */
+            background-color: rgba(0, 0, 0, 0.65); /* Fondo oscuro */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
             padding: 10px 0; /* Espaciado arriba y abajo */
-            width: 100%; /* Asegura que ocupe todo el ancho del viewport */
+            width: 100%; /* Ocupa todo el ancho del viewport */
             margin: 0; /* Elimina cualquier margen */
-            position: fixed; /* Fija la barra de navegación en la parte superior */
+            position: fixed; /* Fija la barra en la parte superior */
             top: 0;
             left: 0;
             z-index: 1000; /* Asegura que esté sobre otros elementos */
-            height: 60px; /* Establecer una altura fija para la navbar */
+            height: auto; /* Ajusta la altura automáticamente */
             display: flex;
-            align-items: center;
+            justify-content: space-between; /* Alinea elementos a los extremos */
+            align-items: center; /* Centra los elementos verticalmente */
+            padding: 0 20px; /* Espaciado horizontal */
+            box-sizing: border-box; /* Incluye padding en el ancho total */
         }
 
         .navbar-custom h1 {
-            margin: 0 auto; /* Centrar el título */
-            padding: 10px 0;
-            font-size: 24px; /* Tamaño de la fuente para el título */
+            margin: 0;
+            font-size: 1.5rem; /* Ajusta el tamaño de la fuente para diferentes pantallas */
             font-weight: 500;
             text-align: center;
+            flex-grow: 1; /* Permite que el título ocupe el espacio disponible */
         }
 
         .navbar-custom .navbar-brand, .navbar-custom .nav-link {
             color: rgb(255, 255, 255);
+            font-size: 1rem; /* Ajusta el tamaño del texto */
+            transition: color 0.3s ease, transform 0.3s ease;
         }
 
         /* Icono de inicio personalizado */
@@ -112,6 +118,7 @@
             font-size: 1.5rem;
             margin-right: 5px;
         }
+
         /* Efecto hover para el icono de inicio */
         .navbar-custom .navbar-brand:hover i {
             color: #00a8ad; /* Cambia el color del icono en hover */
@@ -126,12 +133,12 @@
             font-size: 16px;
             transition: color 0.3s ease, transform 0.3s ease;
         }
-        
+
         .nav-link:hover {
-            color: #00a8ad; /* Cambia el color del icono en hover */
-            transform: scale(1.1); /* Aumenta el tamaño del icono en hover */
-        
+            color: #00a8ad; /* Cambia el color del enlace en hover */
+            transform: scale(1.1); /* Aumenta el tamaño del enlace en hover */
         }
+          
         .square-card {
             width: 80%;
             height: 95%;
@@ -139,7 +146,7 @@
             justify-content: center;
             align-items: center;
         }
-        
+
         .card {
             position: relative;
             background-color: rgba(80, 80, 80, 0.25);
@@ -196,7 +203,7 @@
             z-index: 1;
         }
 
-                /* Ajusta el tamaño de las tarjetas */
+        /* Ajusta el tamaño de las tarjetas */
         .small-card {
             max-width: 280px; /* Ajusta el tamaño máximo de las tarjetas */
             margin: auto; /* Centra la tarjeta horizontalmente */
@@ -225,7 +232,6 @@
         .animated-border-1 {
             border: 1px solid; /* Espesor del borde */
             animation: border-color-animation 3.7s infinite linear;
-
         }
 
         .animated-border-2 {
@@ -246,7 +252,6 @@
         .animated-border-5 {
             border: 1px solid; /* Espesor del borde */
             animation: border-color-animation 4.4s infinite linear;
-
         }
 
         .animated-border-6 {
@@ -268,16 +273,19 @@
         .animated-border:hover {
             box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
         }
+
         /* Ajusta el espaciado de las columnas */
         .col-md-6 {
             padding-left: 0.5rem; /* Ajusta el padding izquierdo de las columnas */
             padding-right: 0.5rem; /* Ajusta el padding derecho de las columnas */
         }
-                /* Ajusta el espaciado entre columnas */
+
+        /* Ajusta el espaciado entre columnas */
         .row.g-2 {
             margin-left: 20rem; /* Ajusta el espacio entre las columnas */
             margin-right: 20rem; /* Ajusta el espacio entre las columnas */
         }
+
         /* Ajusta el margen superior e inferior de las filas */
         .row.custom-spacing {
             margin-top: 1rem; /* Ajusta el margen superior entre filas */
@@ -287,11 +295,6 @@
         /* Si necesitas ajustar el espaciado entre columnas dentro de la fila */
         .row.custom-spacing > .col-md-6 {
             margin-bottom: 1rem; /* Ajusta el margen inferior de las columnas dentro de la fila */
-        }
-        /* Ajusta el tamaño de los botones */
-        .btn-custom {
-            font-size: 1rem; /* Reduce el tamaño del texto del botón */
-            padding: 0.2rem 1rem; /* Ajusta el padding del botón */
         }
 
         main {
@@ -311,8 +314,8 @@
             left: 0;
             width: 100%;
             z-index: 1000; /* Asegura que esté sobre otros elementos */
-
         }
+
 
     </style>
 </head>
