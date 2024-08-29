@@ -1,0 +1,187 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-08-29 23:46+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: ca <LL@li.org>\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.16.0\n"
+
+msgid "You have successfully registered! Please log in."
+msgstr "T'has registrat amb èxit. Si us plau, inicia sessió!"
+
+msgid "Username or email already exists!"
+msgstr "El nom d'usuari o el correu electrònic ja existeix!"
+
+msgid "Error loading country list: {}"
+msgstr "Error en carregar la llista de països: {}"
+
+msgid "Country list file not found"
+msgstr "No s'ha trobat el fitxer de la llista de països"
+
+msgid "You were successfully logged in!"
+msgstr "Has iniciat sessió amb èxit!"
+
+msgid "Login failed. Check your credentials and try again."
+msgstr ""
+"Error en iniciar sessió. Verifica les teves credencials i torna a intentar-"
+"ho."
+
+msgid "Please select a city first."
+msgstr "Si us plau, selecciona una ciutat primer."
+
+msgid "You have been logged out."
+msgstr "Has tancat sessió."
+
+msgid "Your profile has been updated!"
+msgstr "El teu perfil s'ha actualitzat!"
+
+msgid "Your account has been deleted successfully."
+msgstr "El teu compte s'ha eliminat amb èxit."
+
+msgid "Please select a valid city."
+msgstr "Si us plau, selecciona una ciutat vàlida."
+
+msgid "Rate by the users: {:.2f}"
+msgstr "Puntuació pels usuaris: {:.2f}"
+
+msgid "{} has not been rated yet."
+msgstr "{} encara no ha estat puntuat."
+
+msgid "You should visit {}"
+msgstr "Hauries de visitar {}"
+
+msgid "No points available for the selected category: {}."
+msgstr "No hi ha punts disponibles per a la categoria seleccionada: {}."
+
+msgid "Category '{}' does not exist in the selected city."
+msgstr "La categoria '{}' no existeix a la ciutat seleccionada."
+
+msgid "Thank you! The new average rating for {} in {} is {:.2f}."
+msgstr "Gràcies! La nova puntuació mitjana per a {} a {} és {:.2f}."
+
+msgid "Rating must be between 1 and 5."
+msgstr "La puntuació ha d'estar entre 1 i 5."
+
+msgid "Please enter a valid number for rating."
+msgstr "Si us plau, introdueix un número vàlid per puntuar."
+
+msgid "The place \"{}\" does not exist in {} under the category \"{}\"."
+msgstr "El lloc \"{}\" no existeix a {} sota la categoria \"{}\"."
+
+msgid "The point \"{}\" already exists in {}."
+msgstr "El punt \"{}\" ja existeix a {}."
+
+msgid "Place added successfully in {}!"
+msgstr "Lloc afegit amb èxit a {}!"
+
+msgid "{} added successfully in {}!"
+msgstr "{} afegit amb èxit a {}!"
+
+msgid "The point \"{}\" was successfully deleted from {}."
+msgstr "El punt \"{}\" ha estat eliminat amb èxit de {}."
+
+msgid "You do not have permission to delete the point \"{}\"."
+msgstr "No tens permís per eliminar el punt \"{}\"."
+
+msgid "Add a New Point"
+msgstr "Afegeix un Nou Punt"
+
+msgid "Name the new point:"
+msgstr "Nom del nou punt:"
+
+msgid "Category:"
+msgstr "Categoria:"
+
+msgid "Latitude:"
+msgstr "Latitud:"
+
+msgid "Longitude:"
+msgstr "Longitud:"
+
+msgid "Add Point"
+msgstr "Afegeix Punt"
+
+msgid "Choose a Category"
+msgstr "Tria una Categoria"
+
+msgid "Please, choose between Architecture, Art or Urban spaces:"
+msgstr "Si us plau, tria entre Arquitectura, Art o Espais Urbans:"
+
+msgid "Architecture"
+msgstr "Arquitectura"
+
+msgid "Art"
+msgstr "Art"
+
+msgid "Urban Spaces"
+msgstr "Espais Urbans"
+
+msgid "Welcome to"
+msgstr "Benvingut a"
+
+msgid "Find a point"
+msgstr "Troba un punt"
+
+msgid "Rate a Point"
+msgstr "Valora un Punt"
+
+msgid "Add a Point"
+msgstr "Afegeix un Punt"
+
+msgid "Delete a Point"
+msgstr "Elimina un Punt"
+
+msgid ""
+"Are you sure you want to delete your account? This action cannot be undone."
+msgstr ""
+"Estàs segur que vols eliminar el teu compte? Aquesta acció no es pot desfer."
+
+msgid "Delete my Account"
+msgstr "Elimina el meu Compte"
+
+msgid "Point to Delete:"
+msgstr "Punt a Eliminar:"
+
+msgid "Delete Point"
+msgstr "Elimina Punt"
+
+msgid "Username"
+msgstr "Nom d'Usuari"
+
+msgid "Birth Year"
+msgstr "Any de Naixement"
+
+msgid "Country"
+msgstr "País"
+
+msgid "Email"
+msgstr "Correu Electrònic"
+
+msgid "New Password"
+msgstr "Nova Contrasenya"
+
+msgid "Leave blank to keep your current password."
+msgstr "Deixa en blanc per mantenir la teva contrasenya actual."
+
+msgid "Save Changes"
+msgstr "Desa els Canvis"
+
+msgid "Place Name"
+msgstr "Nom del Lloc"
+
+msgid "Rating (1-5):"
+msgstr "Puntuació (1-5):"
+
+msgid "Go back to your user page"
+msgstr "Torna a la teva pàgina d'usuari"
+
+msgid "Go back to the main page"
+msgstr "Torna a la pàgina principal"

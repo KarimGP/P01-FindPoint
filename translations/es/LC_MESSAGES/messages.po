@@ -1,0 +1,188 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-08-29 23:46+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: es <LL@li.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.16.0\n"
+
+msgid "You have successfully registered! Please log in."
+msgstr "Te has registrado con éxito. ¡Por favor, inicia sesión!"
+
+msgid "Username or email already exists!"
+msgstr "¡El nombre de usuario o correo electrónico ya existe!"
+
+msgid "Error loading country list: {}"
+msgstr "Error al cargar la lista de países: {}"
+
+msgid "Country list file not found"
+msgstr "No se encontró el archivo de la lista de países"
+
+msgid "You were successfully logged in!"
+msgstr "¡Has iniciado sesión con éxito!"
+
+msgid "Login failed. Check your credentials and try again."
+msgstr ""
+"Error en el inicio de sesión. Verifica tus credenciales e inténtalo de "
+"nuevo."
+
+msgid "Please select a city first."
+msgstr "Por favor, selecciona una ciudad primero."
+
+msgid "You have been logged out."
+msgstr "Has cerrado sesión."
+
+msgid "Your profile has been updated!"
+msgstr "¡Tu perfil ha sido actualizado!"
+
+msgid "Your account has been deleted successfully."
+msgstr "Tu cuenta ha sido eliminada con éxito."
+
+msgid "Please select a valid city."
+msgstr "Por favor, selecciona una ciudad válida."
+
+msgid "Rate by the users: {:.2f}"
+msgstr "Calificación por los usuarios: {:.2f}"
+
+msgid "{} has not been rated yet."
+msgstr "{} aún no ha sido calificado."
+
+msgid "You should visit {}"
+msgstr "Deberías visitar {}"
+
+msgid "No points available for the selected category: {}."
+msgstr "No hay puntos disponibles para la categoría seleccionada: {}."
+
+msgid "Category '{}' does not exist in the selected city."
+msgstr "La categoría '{}' no existe en la ciudad seleccionada."
+
+msgid "Thank you! The new average rating for {} in {} is {:.2f}."
+msgstr "¡Gracias! La nueva calificación promedio para {} en {} es {:.2f}."
+
+msgid "Rating must be between 1 and 5."
+msgstr "La calificación debe estar entre 1 y 5."
+
+msgid "Please enter a valid number for rating."
+msgstr "Por favor, introduce un número válido para calificar."
+
+msgid "The place \"{}\" does not exist in {} under the category \"{}\"."
+msgstr "El lugar \"{}\" no existe en {} bajo la categoría \"{}\"."
+
+msgid "The point \"{}\" already exists in {}."
+msgstr "El punto \"{}\" ya existe en {}."
+
+msgid "Place added successfully in {}!"
+msgstr "¡Lugar añadido con éxito en {}!"
+
+msgid "{} added successfully in {}!"
+msgstr "¡{} añadido con éxito en {}!"
+
+msgid "The point \"{}\" was successfully deleted from {}."
+msgstr "El punto \"{}\" ha sido eliminado con éxito de {}."
+
+msgid "You do not have permission to delete the point \"{}\"."
+msgstr "No tienes permiso para eliminar el punto \"{}\"."
+
+msgid "Add a New Point"
+msgstr "Añadir un Nuevo Lugar"
+
+msgid "Name the new point:"
+msgstr "Nombre del nuevo lugar:"
+
+msgid "Category:"
+msgstr "Categoría:"
+
+msgid "Latitude:"
+msgstr "Latitud:"
+
+msgid "Longitude:"
+msgstr "Longitud:"
+
+msgid "Add Point"
+msgstr "Añadir Lugar"
+
+msgid "Choose a Category"
+msgstr "Elige una Categoría"
+
+msgid "Please, choose between Architecture, Art or Urban spaces:"
+msgstr "Por favor, elige entre Arquitectura, Arte o Espacios Urbanos:"
+
+msgid "Architecture"
+msgstr "Arquitectura"
+
+msgid "Art"
+msgstr "Arte"
+
+msgid "Urban Spaces"
+msgstr "Espacios Urbanos"
+
+msgid "Welcome to"
+msgstr "Bienvenido a"
+
+msgid "Find a point"
+msgstr "Encuentra un lugar"
+
+msgid "Rate a Point"
+msgstr "Valora un Lugar"
+
+msgid "Add a Point"
+msgstr "Añadir un Lugar"
+
+msgid "Delete a Point"
+msgstr "Eliminar un Lugar"
+
+msgid ""
+"Are you sure you want to delete your account? This action cannot be undone."
+msgstr ""
+"¿Estás seguro de que deseas eliminar tu cuenta? Esta acción no se puede "
+"deshacer."
+
+msgid "Delete my Account"
+msgstr "Eliminar mi Cuenta"
+
+msgid "Point to Delete:"
+msgstr "Lugar a Eliminar:"
+
+msgid "Delete Point"
+msgstr "Eliminar Lugar"
+
+msgid "Username"
+msgstr "Nombre de Usuario"
+
+msgid "Birth Year"
+msgstr "Año de Nacimiento"
+
+msgid "Country"
+msgstr "País"
+
+msgid "Email"
+msgstr "Correo Electrónico"
+
+msgid "New Password"
+msgstr "Nueva Contraseña"
+
+msgid "Leave blank to keep your current password."
+msgstr "Deja en blanco para mantener tu contraseña actual."
+
+msgid "Save Changes"
+msgstr "Guardar Cambios"
+
+msgid "Place Name"
+msgstr "Nombre del Lugar"
+
+msgid "Rating (1-5):"
+msgstr "Calificación (1-5):"
+
+msgid "Go back to your user page"
+msgstr "Volver a tu página de usuario"
+
+msgid "Go back to the main page"
+msgstr "Volver a la página principal"

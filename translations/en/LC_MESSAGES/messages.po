@@ -1,0 +1,185 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-08-29 23:46+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.16.0\n"
+
+msgid "You have successfully registered! Please log in."
+msgstr "You have successfully registered! Please log in."
+
+msgid "Username or email already exists!"
+msgstr "Username or email already exists!"
+
+msgid "Error loading country list: {}"
+msgstr "Error loading country list: {}"
+
+msgid "Country list file not found"
+msgstr "Country list file not found"
+
+msgid "You were successfully logged in!"
+msgstr "You were successfully logged in!"
+
+msgid "Login failed. Check your credentials and try again."
+msgstr "Login failed. Check your credentials and try again."
+
+msgid "Please select a city first."
+msgstr "Please select a city first."
+
+msgid "You have been logged out."
+msgstr "You have been logged out."
+
+msgid "Your profile has been updated!"
+msgstr "Your profile has been updated!"
+
+msgid "Your account has been deleted successfully."
+msgstr "Your account has been deleted successfully."
+
+msgid "Please select a valid city."
+msgstr "Please select a valid city."
+
+msgid "Rate by the users: {:.2f}"
+msgstr "Rate by the users: {:.2f}"
+
+msgid "{} has not been rated yet."
+msgstr "{} has not been rated yet."
+
+msgid "You should visit {}"
+msgstr "You should visit {}"
+
+msgid "No points available for the selected category: {}."
+msgstr "No points available for the selected category: {}."
+
+msgid "Category '{}' does not exist in the selected city."
+msgstr "Category '{}' does not exist in the selected city."
+
+msgid "Thank you! The new average rating for {} in {} is {:.2f}."
+msgstr "Thank you! The new average rating for {} in {} is {:.2f}."
+
+msgid "Rating must be between 1 and 5."
+msgstr "Rating must be between 1 and 5."
+
+msgid "Please enter a valid number for rating."
+msgstr "Please enter a valid number for rating."
+
+msgid "The place \"{}\" does not exist in {} under the category \"{}\"."
+msgstr "The place \"{}\" does not exist in {} under the category \"{}\"."
+
+msgid "The point \"{}\" already exists in {}."
+msgstr "The point \"{}\" already exists in {}."
+
+msgid "Place added successfully in {}!"
+msgstr "Place added successfully in {}!"
+
+msgid "{} added successfully in {}!"
+msgstr "{} added successfully in {}!"
+
+msgid "The point \"{}\" was successfully deleted from {}."
+msgstr "The point \"{}\" was successfully deleted from {}."
+
+msgid "You do not have permission to delete the point \"{}\"."
+msgstr "You do not have permission to delete the point \"{}\"."
+
+msgid "Add a New Point"
+msgstr "Add a New Point"
+
+msgid "Name the new point:"
+msgstr "Name the new point:"
+
+msgid "Category:"
+msgstr "Category:"
+
+msgid "Latitude:"
+msgstr "Latitude:"
+
+msgid "Longitude:"
+msgstr "Longitude:"
+
+msgid "Add Point"
+msgstr "Add Point"
+
+msgid "Choose a Category"
+msgstr "Choose a Category"
+
+msgid "Please, choose between Architecture, Art or Urban spaces:"
+msgstr "Please, choose between Architecture, Art or Urban spaces:"
+
+msgid "Architecture"
+msgstr "Architecture"
+
+msgid "Art"
+msgstr "Art"
+
+msgid "Urban Spaces"
+msgstr "Urban Spaces"
+
+msgid "Welcome to"
+msgstr "Welcome to"
+
+msgid "Find a point"
+msgstr "Find a point"
+
+msgid "Rate a Point"
+msgstr "Rate a Point"
+
+msgid "Add a Point"
+msgstr "Add a Point"
+
+msgid "Delete a Point"
+msgstr "Delete a Point"
+
+msgid ""
+"Are you sure you want to delete your account? This action cannot be undone."
+msgstr ""
+"Are you sure you want to delete your account? This action cannot be undone."
+
+msgid "Delete my Account"
+msgstr "Delete my Account"
+
+msgid "Point to Delete:"
+msgstr "Point to Delete:"
+
+msgid "Delete Point"
+msgstr "Delete Point"
+
+msgid "Username"
+msgstr "Username"
+
+msgid "Birth Year"
+msgstr "Birth Year"
+
+msgid "Country"
+msgstr "Country"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "New Password"
+msgstr "New Password"
+
+msgid "Leave blank to keep your current password."
+msgstr "Leave blank to keep your current password."
+
+msgid "Save Changes"
+msgstr "Save Changes"
+
+msgid "Place Name"
+msgstr "Place Name"
+
+msgid "Rating (1-5):"
+msgstr "Rating (1-5):"
+
+msgid "Go back to your user page"
+msgstr "Go back to your user page"
+
+msgid "Go back to the main page"
+msgstr "Go back to the main page"
