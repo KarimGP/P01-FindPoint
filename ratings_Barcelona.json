@@ -13,7 +13,9 @@
             }
         },
         "Sagrada Familia": {
-            "rating": [],
+            "rating": [
+                5
+            ],
             "coordinates": {
                 "lat": 41.4036,
                 "lng": 2.1744
@@ -38,7 +40,8 @@
         "Museu Picasso": {
             "rating": [
                 4,
-                3
+                3,
+                5
             ],
             "media": 3.5,
             "coordinates": {
@@ -116,6 +119,7 @@
         "Platja Barceloneta": {
             "rating": [
                 4,
+                3,
                 3
             ],
             "media": 3.5,

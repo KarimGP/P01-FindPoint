@@ -1,7 +1,8 @@
 import os
 import json
-from flask import Flask, render_template, request, redirect, url_for, flash, session
+from flask import Flask, render_template, request, redirect, url_for, flash, session, g
 from flask_login import LoginManager, login_user, login_required, logout_user, current_user
+from flask_babel import Babel, gettext as _
 from werkzeug.security import generate_password_hash
 from Choosing_fl import choosin
 from New_points_fl import delete_place, add_place
@@ -17,9 +18,30 @@ login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = 'login'
 
+# Configuración de Flask-Babel
+app.config['BABEL_DEFAULT_LOCALE'] = 'en'
+app.config['BABEL_SUPPORTED_LOCALES'] = ['en', 'es', 'ca']
+app.config['SECRET_KEY'] = 'your_secret_key_here'  # Necesario para usar sesiones
+
+babel = Babel(app)
+
+@babel.localeselector
+def get_locale():
+    return session.get('lang', 'en')
+
 @login_manager.user_loader
 def load_user(user_id):
     return User.get(user_id)
+
+# Ruta para cambiar el idioma
+@app.route('/set_language/<lang_code>')
+def set_language(lang_code):
+    session['lang'] = lang_code
+    return redirect(request.referrer or url_for('index'))
+
+@app.before_request
+def before_request():
+    g.current_lang = session.get('lang', 'en')
 
 # Registrar un nuevo usuario
 @app.route('/register', methods=['GET', 'POST'])
@@ -39,10 +61,10 @@ def register():
                 (username, hashed_password, birth_year, country, email)
             )
             conn.commit()
-            flash('You have successfully registered! Please log in.')
+            flash(_('You have successfully registered! Please log in.'))
             return redirect(url_for('login'))
         except sqlite3.IntegrityError:
-            flash('Username or email already exists!')
+            flash(_('Username or email already exists!'))
             return render_template('register.html')
         finally:
             conn.close()
@@ -52,10 +74,10 @@ def register():
         with open('countries.json') as f:
             countries = json.load(f)
     except json.JSONDecodeError as e:
-        flash(f"Error loading country list: {e}")
+        flash(_("Error loading country list: {}").format(e))
         countries = []
     except FileNotFoundError:
-        flash("Country list file not found")
+        flash(_("Country list file not found"))
         countries = []
 
     return render_template('register.html', countries=countries)
@@ -70,10 +92,10 @@ def login():
         user = User.authenticate(email, password)
         if user:
             login_user(user)
-            flash('You were successfully logged in!')
+            flash(_('You were successfully logged in!'))
             return redirect(url_for('index_b'))
         else:
-            flash('Login failed. Check your credentials and try again.')
+            flash(_('Login failed. Check your credentials and try again.'))
     
     return render_template('login.html')
 
@@ -90,7 +112,7 @@ def dashboard():
     city = session.get('selected_city')
     image_url = url_for('static', filename=f'images/{city}_main.jpg')
     if not city:
-        flash('Please select a city first.')
+        flash(_('Please select a city first.'))
         return redirect(url_for('index_b'))
     return render_template('dashboard.html', city=city, image_url=image_url)
 
@@ -99,7 +121,7 @@ def dashboard():
 @login_required
 def logout():
     logout_user()
-    flash('You have been logged out.')
+    flash(_('You have been logged out.'))
     return redirect(url_for('index'))
 
 @app.route('/profile', methods=['GET', 'POST'])
@@ -125,7 +147,7 @@ def edit_profile():
         conn.commit()
         conn.close()
         
-        flash('Your profile has been updated!')
+        flash(_('Your profile has been updated!'))
         return redirect(url_for('dashboard'))
     
     # Cargar los países desde el archivo JSON
@@ -133,10 +155,10 @@ def edit_profile():
         with open('countries.json') as f:
             countries = json.load(f)
     except json.JSONDecodeError as e:
-        flash(f"Error loading country list: {e}")
+        flash(_("Error loading country list: {}").format(e))
         countries = []
     except FileNotFoundError:
-        flash("Country list file not found")
+        flash(_("Country list file not found"))
         countries = []
 
     return render_template('edit_profile.html', countries=countries)
@@ -155,7 +177,7 @@ def delete_account():
         
         # Cerrar la sesión después de eliminar la cuenta
         logout_user()
-        flash('Your account has been deleted successfully.')
+        flash(_('Your account has been deleted successfully.'))
         return redirect(url_for('index'))
 
     return render_template('delete_account.html')
@@ -175,7 +197,7 @@ def choose_city():
         else:
             return redirect(url_for('choose_category'))
     else:
-        flash('Please select a valid city.')
+        flash(_('Please select a valid city.'))
         return redirect(url_for('index_b'))
 
 @app.route('/choose_category', methods=['GET', 'POST'])
@@ -207,17 +229,17 @@ def visit():
                 ratings = data[choosen_type][interesting_point].get('rating', [])
                 if ratings:
                     average_rating = sum(ratings) / len(ratings)
-                    rating_text = f"Rate by the users: {average_rating:.2f}"
+                    rating_text = _("Rate by the users: {:.2f}").format(average_rating)
                 else:
-                    rating_text = f"{interesting_point} has not been rated yet."
+                    rating_text = _("{} has not been rated yet.").format(interesting_point)
                 
-                return render_template('visit_result.html', point_1=f"You should visit {interesting_point.upper()}",
+                return render_template('visit_result.html', point_1=_("You should visit {}").format(interesting_point.upper()),
                                        latitude=coordinates['lat'], longitude=coordinates['lng'],
                                        rating_text=rating_text)
             else:
-                flash(f"No points available for the selected category: {choosen_type}.")
+                flash(_("No points available for the selected category: {}.").format(choosen_type))
         else:
-            flash(f"Category '{choosen_type}' does not exist in the selected city.")
+            flash(_("Category '{}' does not exist in the selected city.").format(choosen_type))
         return redirect(url_for('choose_category'))
 
     return render_template('choose_category.html')
@@ -242,10 +264,10 @@ def visit_b():
             ratings = data[choosen_type][interesting_point].get('rating', [])
             if ratings:
                 average_rating = sum(ratings) / len(ratings)
-                rating_text = f"Rate by the users: {average_rating:.2f}"
+                rating_text = _("Rate by the users: {:.2f}").format(average_rating)
             else:
-                rating_text = f"{interesting_point} has not been rated yet."
-            return render_template('visit_dashboard.html', point_1=f"You should visit {interesting_point.upper()}",
+                rating_text = _("{} has not been rated yet.").format(interesting_point)
+            return render_template('visit_dashboard.html', point_1=_("You should visit {}").format(interesting_point.upper()),
                                    latitude=coordinates['lat'], longitude=coordinates['lng'],
                                    rating_text=rating_text)
         else:
@@ -259,8 +281,6 @@ def get_places():
     category = request.args.get('category')
     city = session.get('selected_city')
     
-    print(f"City: {city}, Category: {category}")  # Añadido para depurar
-
     if not city:
         return {"places": []}  # Si no hay ciudad seleccionada, devolver una lista vacía
 
@@ -273,7 +293,6 @@ def get_places():
     else:
         places = []
     
-    print(f"Places: {places}")  # Añadido para depurar
     return {"places": places}
 
 # Ruta para valorar un lugar
@@ -299,13 +318,13 @@ def rate():
                 if 1 <= new_rating <= 5:
                     data[category][place]["rating"].append(new_rating)
                     average_rating = sum(data[category][place]["rating"]) / len(data[category][place]["rating"])
-                    result = f'Thank you! The new average rating for {place} in {city} is {average_rating:.2f}.'
+                    result = _('Thank you! The new average rating for {} in {} is {:.2f}.').format(place, city, average_rating)
                 else:
-                    result = "Rating must be between 1 and 5."
+                    result = _("Rating must be between 1 and 5.")
             except ValueError:
-                result = "Please enter a valid number for rating."
+                result = _("Please enter a valid number for rating.")
         else:
-            result = f'The place "{place}" does not exist in {city} under the category "{category}".'
+            result = _('The place "{}" does not exist in {} under the category "{}".').format(place, city, category)
 
         with open(file_name, 'w') as f:
             json.dump(data, f, indent=4)
@@ -335,8 +354,8 @@ def add():
         
         if specify in data:
             if new_point in data[specify]:
-                flash(f'The point "{new_point}" already exists in {city}.')
-                return render_template('result.html', result=f'The point "{new_point}" already exists in {city}.')
+                flash(_('The point "{}" already exists in {}.').format(new_point, city))
+                return render_template('result.html', result=_('The point "{}" already exists in {}.').format(new_point, city))
         else:
             data[specify] = {}
         
@@ -353,8 +372,8 @@ def add():
         with open(file_name, 'w') as f:
             json.dump(data, f, indent=4)
         
-        flash(f'Place added successfully in {city}!')
-        return render_template('result.html', result=f'{new_point} added successfully in {city}!')
+        flash(_('Place added successfully in {}!').format(city))
+        return render_template('result.html', result=_('{} added successfully in {}!').format(new_point, city))
     
     return render_template('add_place.html')
 
@@ -383,11 +402,11 @@ def delete():
                 if not data[specify]:
                     del data[specify]
                 
-                result = f'The point "{delete_point}" was successfully deleted from {city}.'
+                result = _('The point "{}" was successfully deleted from {}.').format(delete_point, city)
             else:
-                result = f'You do not have permission to delete the point "{delete_point}".'
+                result = _('You do not have permission to delete the point "{}".').format(delete_point)
         else:
-            result = f'The point "{delete_point}" does not exist in {city} under the category "{specify}".'
+            result = _('The point "{}" does not exist in {} under the category "{}".').format(delete_point, city, specify)
         
         with open(file_name, 'w') as f:
             json.dump(data, f, indent=4)
