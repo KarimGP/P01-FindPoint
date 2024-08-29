@@ -12,8 +12,13 @@ Add a New Point
         <form method="post">
             <label for="new_point">Name the new point:</label>
             <input type="text" id="new_point" name="new_point" style="width: 100%; padding: 10px; margin-bottom: 10px;" required>
-            <label for="category">Category (arc, art, us):</label>
-            <input type="text" id="category" name="category" style="width: 100%; padding: 10px; margin-bottom: 10px;" required>
+            <label for="category">Category:</label>
+            <select id="category" name="category" style="width: 100%; padding: 10px; margin-bottom: 10px;" required>
+                <option value="" disabled selected>Select a category</option>
+                <option value="arc">Architecture</option>
+                <option value="art">Art</option>
+                <option value="us">Urban spaces</option>
+            </select>
             <label for="latitude">Latitude:</label>
             <input type="text" id="latitude" name="latitude" required>
             <label for="longitude">Longitude:</label>

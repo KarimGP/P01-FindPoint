@@ -10,8 +10,13 @@ Choose a Category
 <div style="margin-top: 20px; max-width: 600px; margin-left: auto; margin-right: auto;">
     <div style="padding: 20px; border: 1px solid #ddd; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);">
         <form method="POST" action="{{ url_for('visit') }}">
-            <label for="category">Please, choose between Architecture (arc), Art (art) or Urban spaces (us):</label>
-            <input type="text" id="category" name="category" style="width: 100%; padding: 10px; margin-bottom: 10px;" required>
+            <label for="category">Please, choose between Architecture, Art or Urban spaces:</label>
+            <select id="category" name="category" style="width: 100%; padding: 10px; margin-bottom: 10px;" required>
+                <option value="" disabled selected>Select a category</option>
+                <option value="arc">Architecture</option>
+                <option value="art">Art</option>
+                <option value="us">Urban spaces</option>
+            </select>
             <button type="submit" style="width: 100%; padding: 10px; background-color: #00a8ad; color: white;">
                 Submit
             </button>

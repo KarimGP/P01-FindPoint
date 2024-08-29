@@ -10,10 +10,19 @@ Rate a Point
 <div style="margin-top: 20px; max-width: 600px; margin-left: auto; margin-right: auto;">
     <div style="padding: 20px; border: 1px solid #ddd; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);">
         <form method="post">
-            <label for="category">Category (arc, art, us):</label>
-            <input type="text" id="category" name="category" style="width: 100%; padding: 10px; margin-bottom: 10px;" required>
+            <label for="category">Category:</label>
+            <select id="category" name="category" style="width: 100%; padding: 10px; margin-bottom: 10px;" required>
+                <option value="" disabled selected>Select a category</option>
+                <option value="arc">Architecture</option>
+                <option value="art">Art</option>
+                <option value="us">Urban spaces</option>
+            </select>
+            
             <label for="place">Place Name:</label>
-            <input type="text" id="place" name="place" style="width: 100%; padding: 10px; margin-bottom: 10px;" required>
+            <select id="place" name="place" style="width: 100%; padding: 10px; margin-bottom: 10px;" required>
+                <option value="">Select a place</option>
+            </select>
+
             <label for="rating">Rating (1-5):</label>
             <input type="number" id="rating" name="rating" style="width: 100%; padding: 10px; margin-bottom: 10px;" min="1" max="5" required>
             <button type="submit" style="width: 100%; padding: 10px; background-color: #00a8ad; color: white;">
@@ -22,5 +31,32 @@ Rate a Point
         </form>
     </div>
 </div>
+
+<script>
+    document.getElementById('category').addEventListener('change', function () {
+        var category = this.value;
+        fetch(`/get_places?category=` + category)
+            .then(response => response.json())
+            .then(data => {
+                var placeSelect = document.getElementById('place');
+                placeSelect.innerHTML = '';  // Clear previous options
+
+                if (data.places.length > 0) {
+                    data.places.forEach(function (place) {
+                        var option = document.createElement('option');
+                        option.value = place;
+                        option.text = place;
+                        placeSelect.add(option);
+                    });
+                } else {
+                    var option = document.createElement('option');
+                    option.value = "";
+                    option.text = "No points in this category";
+                    placeSelect.add(option);
+                }
+            });
+    });
+</script>
 {% endblock %}
+
 
