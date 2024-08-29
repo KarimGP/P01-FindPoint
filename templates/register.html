@@ -2,7 +2,7 @@
 
 {% block title %}Register - FindPoint{% endblock %}
 
-{% set page_title = "Let's sign up" %}
+{% set page_title = _("Let's sign up") %}
 
 {% block header %}
     {{ page_title }}
@@ -15,18 +15,18 @@
             <form method="POST" action="{{ url_for('register') }}">
                 <!-- Campo de Username -->
                 <div class="mb-3">
-                    <label for="username" class="form-label">Username</label>
+                    <label for="username" class="form-label">{{_("Username") }}</label>
                     <input type="text" class="form-control" id="username" name="username" required>
                 </div>
                 <!-- Campo de Año de Nacimiento -->
                 <div class="mb-3">
-                    <label for="birth_year" class="form-label">Birth year</label>
+                    <label for="birth_year" class="form-label">{{_("Birth Year") }}</label>
                     <input type="number" class="form-control" id="birth_year" name="birth_year" placeholder="YYYY" min="1900" max="{{ current_year }}" required>
                 </div>
 
                 <!-- Campo de País -->
                 <div class="mb-3">
-                    <label for="country" class="form-label">Country</label>
+                    <label for="country" class="form-label">{{_("Country") }}</label>
                     <select class="form-control" id="country" name="country" required>
                         <option value="" disabled selected>Select your country</option>
                         {% for country in countries %}
@@ -36,12 +36,12 @@
                 </div>
                 <!-- Campo de Email -->
                 <div class="mb-3">
-                    <label for="email" class="form-label">Email address</label>
+                    <label for="email" class="form-label">{{_("Email") }}</label>
                     <input type="email" class="form-control" id="email" name="email" required>
                 </div>
                 <!-- Campo de Password -->
                 <div class="mb-3">
-                    <label for="password" class="form-label">Password</label>
+                    <label for="password" class="form-label">{{_("Password") }}</label>
                     <input type="password" class="form-control" id="password" name="password" required>
                 </div>
                 <!-- Botón de Sign Up -->

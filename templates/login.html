@@ -2,7 +2,7 @@
 
 {% block title %}Login - FindPoint{% endblock %}
 
-{% set page_title = "Let's log in" %}
+{% set page_title = _("Let's Log in") %}
 
 {% block header %}
     {{ page_title }}
@@ -15,12 +15,12 @@
             <form method="POST" action="{{ url_for('login') }}">
                 <!-- Campo de Email -->
                 <div class="mb-3">
-                    <label for="email" class="form-label">Email address</label>
+                    <label for="email" class="form-label">{{_("Email") }}</label>
                     <input type="email" class="form-control" id="email" name="email" required>
                 </div>
                 <!-- Campo de Password -->
                 <div class="mb-3">
-                    <label for="password" class="form-label">Password</label>
+                    <label for="password" class="form-label">{{_("Password") }}</label>
                     <input type="password" class="form-control" id="password" name="password" required>
                 </div>
                 <!-- Botón de Login -->

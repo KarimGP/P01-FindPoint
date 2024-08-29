@@ -1,30 +1,30 @@
 {% extends "base.html" %}
 
-{% block title %}Add a New Point{% endblock %}
+{% block title %}{{_("Add a New Point") }}{% endblock %}
 
 {% block header %}
-Add a New Point
+{{_("Add a New Point") }}
 {% endblock %}
 
 {% block content %}
 <div style="margin-top: 20px; max-width: 600px; margin-left: auto; margin-right: auto;">
     <div style="padding: 20px; border: 1px solid #ddd; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);">
         <form method="post">
-            <label for="new_point">Name the new point:</label>
+            <label for="new_point">{{_("Name the new point:") }}</label>
             <input type="text" id="new_point" name="new_point" style="width: 100%; padding: 10px; margin-bottom: 10px;" required>
-            <label for="category">Category:</label>
+            <label for="category">{{_("Category:") }}</label>
             <select id="category" name="category" style="width: 100%; padding: 10px; margin-bottom: 10px;" required>
                 <option value="" disabled selected>Select a category</option>
                 <option value="arc">Architecture</option>
                 <option value="art">Art</option>
                 <option value="us">Urban spaces</option>
             </select>
-            <label for="latitude">Latitude:</label>
+            <label for="latitude">{{_("Latitude:") }}</label>
             <input type="text" id="latitude" name="latitude" required>
-            <label for="longitude">Longitude:</label>
-            <input type="text" id="longitude" name="longitude" required>
+            <label for="longitude">{{_("Longitude:") }}</label>
+            <input type="text" id="longitude" name="longitude" style= "margin-bottom: 10px" required>
             <button type="submit" style="width: 100%; padding: 10px; background-color: #00a8ad; color: white;">
-                Add Point
+                {{_("Add Point") }}
             </button>
         </form>
     </div>

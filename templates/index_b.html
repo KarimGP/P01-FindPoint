@@ -2,7 +2,7 @@
 
 {% block title %}Home - FindPoint{% endblock %}
 
-{% set page_title = "Hi " ~ current_user.username ~ "! Let's choose a city" %}
+{% set page_title = _("Hi ") ~ current_user.username ~ _("! Let's choose a city") %}
 
 {% block header %}
 {{ page_title }}

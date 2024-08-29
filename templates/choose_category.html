@@ -1,21 +1,21 @@
 {% extends "base.html" %}
 
-{% block title %}Choose a Category{% endblock %}
+{% block title %}{{ _("Choose a Category") }}{% endblock %}
 
 {% block header %}
-Choose a Category
+{{_("Choose a Category") }}
 {% endblock %}
 
 {% block content %}
 <div style="margin-top: 20px; max-width: 600px; margin-left: auto; margin-right: auto;">
     <div style="padding: 20px; border: 1px solid #ddd; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);">
-        <form method="POST" action="{{ url_for('visit') }}">
-            <label for="category">Please, choose between Architecture, Art or Urban spaces:</label>
+        <form method="post" action="{{ url_for('visit') }}">
+            <label for="category">{{_("Please, choose between Architecture, Art or Urban spaces:") }}</label>
             <select id="category" name="category" style="width: 100%; padding: 10px; margin-bottom: 10px;" required>
                 <option value="" disabled selected>Select a category</option>
-                <option value="arc">Architecture</option>
-                <option value="art">Art</option>
-                <option value="us">Urban spaces</option>
+                <option value="arc">{{_("Architecture") }}</option>
+                <option value="art">{{_("Art") }}</option>
+                <option value="us">{{_("Urban Spaces") }}</option>
             </select>
             <button type="submit" style="width: 100%; padding: 10px; background-color: #00a8ad; color: white;">
                 Submit
