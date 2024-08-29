@@ -253,6 +253,29 @@ def visit_b():
     
     return render_template('choose_category_d.html')
 
+# Ruta para coger lugares que se usarán para el rate
+@app.route('/get_places')
+def get_places():
+    category = request.args.get('category')
+    city = session.get('selected_city')
+    
+    print(f"City: {city}, Category: {category}")  # Añadido para depurar
+
+    if not city:
+        return {"places": []}  # Si no hay ciudad seleccionada, devolver una lista vacía
+
+    file_name = f'ratings_{city}.json'
+    
+    if os.path.exists(file_name):
+        with open(file_name, 'r') as f:
+            data = json.load(f)
+        places = list(data.get(category, {}).keys())
+    else:
+        places = []
+    
+    print(f"Places: {places}")  # Añadido para depurar
+    return {"places": places}
+
 # Ruta para valorar un lugar
 @app.route('/rate', methods=['GET', 'POST'])
 @login_required
