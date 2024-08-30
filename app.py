@@ -418,4 +418,4 @@ def delete():
 # Crear la tabla de usuarios al iniciar la app
 if __name__ == "__main__":
     create_users_table()
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=True)
