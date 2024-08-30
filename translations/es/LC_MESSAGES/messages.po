@@ -186,3 +186,24 @@ msgstr "Volver a tu página de usuario"
 
 msgid "Go back to the main page"
 msgstr "Volver a la página principal"
+
+msgid "Go!"
+msgstr "Ir!"
+
+msgid "Hi "
+msgstr "Hola "
+
+msgid "! Let's choose a city"
+msgstr "! Vamos a elegir una ciudad"
+
+msgid "Welcome to "
+msgstr "Bienvenido a "
+
+msgid "Let's Log in"
+msgstr "Iniciemos Sesión"
+
+msgid "Let's sign up"
+msgstr "Regístrate"
+
+msgid "All rights reserved."
+msgstr "Todos los derechos reservados."

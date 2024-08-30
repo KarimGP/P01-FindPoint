@@ -185,3 +185,27 @@ msgstr "Torna a la teva pàgina d'usuari"
 
 msgid "Go back to the main page"
 msgstr "Torna a la pàgina principal"
+
+msgid "Go!"
+msgstr "Anar!"
+
+msgid "Hi "
+msgstr "Hola "
+
+msgid "! Let's choose a city"
+msgstr "! Triem una ciutat"
+
+msgid "Welcome to "
+msgstr "Benvingut a "
+
+msgid "Let's Log in"
+msgstr "Iniciem Sessió"
+
+msgid "Let's sign up"
+msgstr "Registra't"
+
+msgid "Welcome to {}!"
+msgstr "Benvingut a {}!"
+
+msgid "All rights reserved."
+msgstr "Tots els drets reservats."

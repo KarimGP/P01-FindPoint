@@ -395,7 +395,7 @@
                 {{ page_title }}
             {% else %}
                 {% if session.get('selected_city') %}
-                    Welcome to {{ session['selected_city'] | title }}!
+                    {{ _("Welcome to ") }} {{ session['selected_city'] | title }}!
                 {% endif %}
             {% endif %}
         </h1>
@@ -427,7 +427,7 @@
         {% block content %}{% endblock %}
     </main>
     <footer>
-        <p>&copy; 2024 FindPoint. All rights reserved.</p>
+        <p>&copy; 2024 FindPoint. {{ _("All rights reserved.") }}</p>
     </footer>
 
     <!-- Incluir Bootstrap JS -->
