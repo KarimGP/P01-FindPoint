@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-08-30 00:25+0200\n"
+"POT-Creation-Date: 2024-08-30 10:28+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -146,6 +146,14 @@ msgstr ""
 msgid "Add Point"
 msgstr ""
 
+#: templates/base.html:398 templates/index.html:5
+msgid "Welcome to "
+msgstr ""
+
+#: templates/base.html:430
+msgid "All rights reserved."
+msgstr ""
+
 #: templates/choose_category.html:3 templates/choose_category.html:6
 #: templates/choose_category_d.html:3 templates/choose_category_d.html:6
 msgid "Choose a Category"
@@ -205,7 +213,7 @@ msgid "Point to Delete:"
 msgstr ""
 
 #: templates/delete_place.html:27
-msgid "Delete Point:"
+msgid "Delete Point"
 msgstr ""
 
 #: templates/edit_profile.html:16 templates/register.html:18
@@ -237,10 +245,6 @@ msgstr ""
 msgid "Save Changes"
 msgstr ""
 
-#: templates/index.html:5
-msgid "Welcome to "
-msgstr ""
-
 #: templates/index_b.html:5
 msgid "Hi "
 msgstr ""
@@ -269,11 +273,15 @@ msgstr ""
 msgid "Let's sign up"
 msgstr ""
 
-#: templates/result.html:14 templates/visit_dashboard.html:18
+#: templates/result.html:14 templates/visit_dashboard.html:20
 msgid "Go back to your user page"
 msgstr ""
 
-#: templates/visit_result.html:17
+#: templates/visit_dashboard.html:18 templates/visit_result.html:17
+msgid "Go!"
+msgstr ""
+
+#: templates/visit_result.html:19
 msgid "Go back to the main page"
 msgstr ""
 

@@ -58,7 +58,16 @@ translations = {
         "Place Name": "Place Name",
         "Rating (1-5):": "Rating (1-5):",
         "Go back to your user page": "Go back to your user page",
-        "Go back to the main page": "Go back to the main page"
+        "Go back to the main page": "Go back to the main page",
+        "Go!":"Go!",
+        "Choose a Category": "Choose a Category",
+        "Hi": "Hi",
+        "! Let's choose a city": "! Let's choose a city",
+        "Welcome to ": "Welcome to ",
+        "Let's Log in": "Let's Log in",
+        "Let's sign up": "Let's sign up",
+        "Welcome to {}!": "Welcome to {}!"
+
     },
     "es": {
         "You have successfully registered! Please log in.": "Te has registrado con éxito. ¡Por favor, inicia sesión!",
@@ -116,7 +125,15 @@ translations = {
         "Place Name": "Nombre del Lugar",
         "Rating (1-5):": "Calificación (1-5):",
         "Go back to your user page": "Volver a tu página de usuario",
-        "Go back to the main page": "Volver a la página principal"
+        "Go back to the main page": "Volver a la página principal",
+        "Go!":"Ir!",
+        "Choose a Category": "Elige una Categoría",
+        "Hi": "Hola",
+        "! Let's choose a city": "¡Vamos a elegir una ciudad!",
+        "Welcome to ": "Bienvenido a ",
+        "Let's Log in": "Iniciemos Sesión",
+        "Let's sign up": "Regístrate",
+        "Welcome to {}!": "Bienvenido a {}!"
     },
     "ca": {
         "You have successfully registered! Please log in.": "T'has registrat amb èxit. Si us plau, inicia sessió!",
@@ -174,7 +191,15 @@ translations = {
         "Place Name": "Nom del Lloc",
         "Rating (1-5):": "Puntuació (1-5):",
         "Go back to your user page": "Torna a la teva pàgina d'usuari",
-        "Go back to the main page": "Torna a la pàgina principal"
+        "Go back to the main page": "Torna a la pàgina principal",
+        "Go!": "Anar!",
+        "Choose a Category": "Tria una Categoria",
+        "Hi": "Hola",
+        "! Let's choose a city": "Triem una ciutat!",
+        "Welcome to ": "Benvingut a ",
+        "Let's Log in": "Iniciem Sessió",
+        "Let's sign up": "Registra't",
+        "Welcome to {}!": "Benvingut a {}!"
     }
 }
 
@@ -204,7 +229,7 @@ def generate_po_files(translations, output_dir):
         po.save(output_file)
 
 # Specify the output directory
-output_dir = 'translations/<lang_code>/LC_MESSAGES/'
+output_dir = 'translations/'
 
 # Generate the .po files
 generate_po_files(translations, output_dir)
