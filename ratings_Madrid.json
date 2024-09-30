@@ -1,4 +1,34 @@
 {
+    "arc": {
+        "Edificio Metropolis": {
+            "rating": [
+                4,
+                3,
+                5
+            ],
+            "media": 3.5,
+            "coordinates": {
+                "lat": 40.43566,
+                "lng": -4.08488
+            }
+        }
+    },    
+
+    "art": {
+        "Museo del Prado": {
+            "rating": [
+                5,
+                5,
+                5
+            ],
+            "media": 5,
+            "coordinates": {
+                "lat": 40.43466,
+                "lng": -3.86406
+            }
+        }
+    },
+
     "us": {
         "El Retiro": {
             "rating": [],
@@ -7,5 +37,5 @@
                 "lng": -3.6831157774983083
             }
         }
-    }
+    }   
 }
