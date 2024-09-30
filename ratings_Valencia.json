@@ -1,12 +1,30 @@
 {
+    "arc": {
+        "Palacio del Marqués de Dos Aguas": {
+            "rating": [],
+            "coordinates": {
+                "lat": 39.48627,
+                "lng": -0.35665
+            }
+        }
+    },
+    
     "art": {
         "Ciudad De Las Artes Y Las Ciencias": {
-            "rating": [
-                4
-            ],
+            "rating": [],
             "coordinates": {
-                "lat": 39.45880400219087,
-                "lng": -0.3500677171111515
+                "lat": 39.45198,
+                "lng": -0.06584
+            }
+        }
+    },
+
+    "us": {
+        "Jardins de Montfort": {
+            "rating": [],
+            "coordinates": {
+                "lat": 39.47706,
+                "lng": -0.36641
             }
         }
     }
