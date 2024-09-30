@@ -9,7 +9,7 @@
             "media": 5.0,
             "coordinates": {
                 "lat": 41.3917,
-                "lng": 2.1649
+                "lng": 2.16622
             }
         },
         "Sagrada Familia": {
@@ -17,24 +17,18 @@
                 5
             ],
             "coordinates": {
-                "lat": 41.4036,
-                "lng": 2.1744
+                "lat": 41.40440,
+                "lng": 2.17507
             }
         },
         "Catedral": {
             "rating": [],
             "coordinates": {
-                "lat": 41.384,
-                "lng": 2.1761
-            }
-        },
-        "Pop": {
-            "rating": [],
-            "coordinates": {
-                "lat": 41.40568392560884,
-                "lng": 2.190781226809329
+                "lat": 41.38378,
+                "lng": 2.18313
             }
         }
+        
     },
     "art": {
         "Museu Picasso": {
@@ -45,8 +39,8 @@
             ],
             "media": 3.5,
             "coordinates": {
-                "lat": 41.3851,
-                "lng": 2.1805
+                "lat": 41.38570,
+                "lng": 2.18644
             }
         },
         "Macba": {
@@ -67,8 +61,8 @@
             ],
             "media": 4.31,
             "coordinates": {
-                "lat": 41.3837,
-                "lng": 2.1661
+                "lat": 41.38354,
+                "lng": 2.16999
             }
         },
         "Ideal Barcelona": {
@@ -78,18 +72,11 @@
             ],
             "media": 3.5,
             "coordinates": {
-                "lat": 41.3837,
-                "lng": 2.1661
+                "lat": 41.39768,
+                "lng": 2.20458
             }
-        },
-        "Kok": {
-            "rating": [],
-            "coordinates": {
-                "lat": 41.40568392560884,
-                "lng": -3.6831157774983083
-            },
-            "user_id": 2
         }
+        
     },
     "us": {
         "Parc G\u00fcell": {
@@ -99,8 +86,8 @@
             ],
             "media": 3.5,
             "coordinates": {
-                "lat": 41.3837,
-                "lng": 2.1661
+                "lat": 41.41451,
+                "lng": 2.15260
             }
         },
         "Montju\u00efc": {
@@ -112,8 +99,8 @@
             ],
             "media": 4.25,
             "coordinates": {
-                "lat": 41.3837,
-                "lng": 2.1661
+                "lat": 41.36538,
+                "lng": 2.17098
             }
         },
         "Platja Barceloneta": {
@@ -124,16 +111,10 @@
             ],
             "media": 3.5,
             "coordinates": {
-                "lat": 41.3837,
-                "lng": 2.1661
-            }
-        },
-        "Aa": {
-            "rating": [],
-            "coordinates": {
-                "lat": 41.40568392560884,
-                "lng": 2.190781226809329
+                "lat": 41.37993,
+                "lng": 2.19265
             }
         }
+        
     }
 }
